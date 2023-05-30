@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RunneR</title>
+    <style>
+        /* Stijl voor de voorgrond SVG */
+        #foreground-svg {
+            position: absolute;
+            top: 20.4em;
+            left: 6.4em;
+            right: 50em;
+            z-index: 1;
+        }
+
+        body {
+            background-image: url("achtergrondV2.jpg");
+            background-repeat: repeat-x;
+            background-position: 0 0;
+            animation: scrollBackground 8s ease-in infinite;
+        }
+
+        @keyframes scrollBackground {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 120% 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <svg id="foreground-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330.61 72.97">
+        <defs>
+            <style>
+                .k {fill: none; stroke: #af4d3e; stroke-miterlimit: 10; stroke-width: 8px;}
+            </style>
+        </defs>
+        <g id="a"></g>
+        <g id="b">
+            <g id="c">
+                <path id="d" class="k" d="M4,57.3v-7.74s.04-.09,.09-.09H30.64s.08-.04,.08-.08V4.02h19.91s13.78-1.39,15.05,17.82c.26,3.97-.69,7.98-3.03,11.2-3,4.13-8.87,8.26-20.36,8.26h-1.38l15.91,24.97c.04,.07,.14,.08,.19,.02l8.11-8.11"></path>
+                <line class="k" x1="40.91" y1="41.3" x2="30.72" y2="41.3"></line>
+                <g id="e">
+                    <path class="k" d="M75.97,.63V40.93c0,4.59,.93,9.16,2.91,13.23,2.23,4.59,6.02,9.18,12.23,9.18h3.23"></path>
+                    <path class="k" d="M108.51,.63V40.93c0,4.59-.93,9.16-2.91,13.23-2.23,4.59-6.02,9.18-12.23,9.18"></path>
+                </g>
+                <path id="f" class="k" d="M256.64,4.87h-31.83c-.8,0-1.45,.66-1.45,1.47V62.67c0,.81,.65,1.47,1.45,1.47h31.83"></path>
+                <line class="k" x1="236" y1="34.98" x2="219.79" y2="34.98"></line>
+                <polyline id="g" class="k" points="171.6 67.86 171.6 4.34 177.15 4.34 205.81 64.52 208.91 64.52 208.91 .63"></polyline>
+                <polyline id="h" class="k" points="121.89 67.81 121.89 4.34 127.45 4.34 156.11 64.47 159.21 64.47 159.21 .63"></polyline>
+                <path id="BeenR" class="k" d="M305.58,42.8l9,26.1c.02,.06,.09,.08,.14,.06l9.85-5.17"></path>
+                <path id="j" class="k" d="M264.87,57.34v-7.74s.04-.09,.09-.09h26.54c.05,0,.09-.04,.09-.09V4.07h19.91s13.78-1.39,15.05,17.82c.26,3.97-.69,7.98-3.03,11.2-3,4.13-8.87,8.26-20.36,8.26h-1.38l.35,.55"></path>
+                <line class="k" x1="301.79" y1="41.34" x2="291.6" y2="41.34"></line>
+            </g>
+        </g>
+    </svg>
+    <script>
+        const animation = document.createElementNS("http://www.w3.org/2000/svg", "animateTransform");
+        animation.setAttribute("attributeName", "transform");
+        animation.setAttribute("type", "rotate");
+        animation.setAttribute("repeatCount", "indefinite");
+        animation.setAttribute("dur", "0.6s");
+        animation.setAttribute("values", "0 280 60; -9 280 50; 0 280 50");
+        animation.setAttribute("keyTimes", "0; 0.5; 1");
+
+        const beenR = document.getElementById("BeenR");
+        beenR.appendChild(animation);
+
+    </script>
+</body>
+</html>
