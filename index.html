@@ -36,7 +36,7 @@
                 background-position: 0 0;
             }
             100% {
-                background-position: 120% 0;
+                background-position: 130% 0;
             }
         }
 
@@ -53,7 +53,7 @@
             }
             body {
             background-image: url("achtergrondV2.jpg");
-            background-size: 780% ;
+            background-size: 840% ;
             background-repeat: repeat-x;
             background-position: 0 0;
             animation: scrollBackground 8s ease-in infinite;
@@ -105,14 +105,14 @@
             <path id="i" class="k" d="M261.41,50.15c.3,0,.55-.25,.55-.55V5.28c0-.32,.26-.58,.58-.58h12.18c6.13,0,12.52-.82,17.16,4.1,2.71,2.87,4.2,6.74,4.8,10.64,.73,4.7,.19,9.76-2.4,13.74-1.91,2.94-4.84,5.13-8.05,6.51-3.98,1.71-8.39,2.28-12.69,2.28h-1.38l.35,.55" />
             <path id="BeenLR" class="k" d="M235.23,57.98v-7.28c0-.31,.25-.55,.55-.55h25.62">
                 <animateTransform
-                    attributeName="transform"
-                    attributeType="XML"
-                    type="rotate"
-                    from="0"
-                    to="0.1"
-                    repeatCount="indefinite"
-                    dur="1.5s"
-                />
+                attributeName="transform"
+                attributeType="XML"
+                type="rotate"
+                from="0"
+                to="0.00001"
+                repeatCount="0.11"
+                dur="0.01s"
+            />
 
                     <animateTransform
                         attributeName="transform"
@@ -147,18 +147,18 @@
 
 
 
-    <script>
-        const animation = document.createElementNS("http://www.w3.org/2000/svg", "animateTransform");
-        animation.setAttribute("attributeName", "transform");
-        animation.setAttribute("type", "rotate");
-        animation.setAttribute("repeatCount", "indefinite");
-        animation.setAttribute("dur", "0.6s");
-        animation.setAttribute("values", "0 280 60; -9 280 50; 0 280 50");
-        animation.setAttribute("keyTimes", "0; 0.5; 1");
-
-        const beenR = document.getElementById("BeenR");
-        beenR.appendChild(animation);
-
-    </script>
+        <script>
+            const animation = document.createElementNS("http://www.w3.org/2000/svg", "animateTransform");
+            animation.setAttribute("attributeName", "transform");
+            animation.setAttribute("type", "rotate");
+            animation.setAttribute("repeatCount", "indefinite");
+            animation.setAttribute("dur", "0.6s");
+            animation.setAttribute("values", "0 280 60; -12 280 50; 0 280 50");
+            animation.setAttribute("keyTimes", "0; 0.5; 1");
+        
+            const beenR = document.getElementById("BeenR");
+            beenR.appendChild(animation);
+        </script>
+        
 </body>
 </html>
